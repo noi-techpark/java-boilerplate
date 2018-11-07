@@ -9,7 +9,7 @@ ToDo: Description of the project.
 - [Gettings started](#getting-started)
 - [Running tests](#running-tests)
 - [Deployment](#deployment)
-- [Docker Environment](#docker-environment)
+- [Docker environment](#docker-environment)
 - [Information](#information)
 
 ## Getting started
@@ -25,7 +25,7 @@ To build the project, the following prerequisites must be met:
 - Java JDK 1.8 or higher (e.g. [OpenJDK](https://openjdk.java.net/))
 - [Maven](https://maven.apache.org/) 3.x
 
-For a ready to use Docker environment with all prerequisites already installed and prepared, you can check out the [Docker Environment](#docker-environment) section.
+For a ready to use Docker environment with all prerequisites already installed and prepared, you can check out the [Docker environment](#docker-environment) section.
 
 ### Source code
 
@@ -61,7 +61,7 @@ mvn clean test
 
 ToDo: A detailed description about how the application must be deployed.
 
-## Docker Environment
+## Docker environment
 
 For the project a Docker environment is already prepared and ready to use with all necessary prerequisites.
 
