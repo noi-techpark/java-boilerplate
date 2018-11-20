@@ -107,7 +107,7 @@ docker-compose exec java /bin/bash -c "mvn clean test"
 
 ### Support
 
-For support, please contact [IDM Südtirol - Alto Adige](https://www.idm-suedtirol.com/).
+For support, please contact [info@opendatahub.bz.it](mailto:info@opendatahub.bz.it).
 
 ### Contributing
 
@@ -121,6 +121,9 @@ If you'd like to contribute, please follow the following instructions:
 
 - Create a pull request against the `development` branch.
 
+### Documentation
+
+More documentation can be found at [https://opendatahub.readthedocs.io/en/latest/index.html](https://opendatahub.readthedocs.io/en/latest/index.html).
 
 ### License
 
