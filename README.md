@@ -4,7 +4,7 @@ Replace all `ToDo` notes with the appropriate names, descriptions and commands.
 
 ToDo: Description of the project.
 
-## Table of Contents
+## Table of contents
 
 - [Gettings started](#getting-started)
 - [Running tests](#running-tests)
