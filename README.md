@@ -107,7 +107,7 @@ docker-compose exec java /bin/bash -c "mvn clean test"
 
 ### Support
 
-For support, please contact [info@opendatahub.bz.it](mailto:info@opendatahub.bz.it).
+ToDo: For support, please contact [info@opendatahub.bz.it](mailto:info@opendatahub.bz.it).
 
 ### Contributing
 
@@ -127,5 +127,5 @@ More documentation can be found at [https://opendatahub.readthedocs.io/en/latest
 
 ### License
 
-The code in this project is licensed under the Mozilla Public License 2.0 license.
+ToDo: The code in this project is licensed under the Mozilla Public License 2.0 license.
 See the LICENSE.md file for more information.
