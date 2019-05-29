@@ -32,7 +32,7 @@ For a ready to use Docker environment with all prerequisites already installed a
 Get a copy of the repository:
 
 ```bash
-ToDo: git clone https://github.com/idm-suedtirol/project-name.git
+ToDo: git clone https://github.com/noi-techpark/project-name.git
 ```
 
 Change directory:
