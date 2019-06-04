@@ -127,5 +127,4 @@ More documentation can be found at [https://opendatahub.readthedocs.io/en/latest
 
 ### License
 
-ToDo: The code in this project is licensed under the Mozilla Public License 2.0 license.
-See the LICENSE.md file for more information.
+The code in this project is licensed under the GNU AFFERO GENERAL PUBLIC LICENSE Version 3 license. See the [LICENSE.md](LICENSE.md) file for more information.
