@@ -1,11 +1,31 @@
-version: "3"
+version: "3.4"
+
 services:
-  java:
+  app:
     build:
       context: .
-      dockerfile: docker/dockerfile-java
+      dockerfile: docker/Dockerfile
+      target: dev
     volumes:
        - ./:/code
     working_dir: /code
-    command: tail -f /dev/null
+    command: ["mvn spring-boot:run"]
+    depends_on:
+      - postgres
     tty: true
+    environment:
+      SERVER_PORT: ${SERVER_PORT}
+      POSTGRES_URL: ${POSTGRES_URL}
+      POSTGRES_USERNAME: ${POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${SERVER_PORT}:${SERVER_PORT}"
+
+  postgres:
+    image: postgres:11
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USERNAME: ${POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"

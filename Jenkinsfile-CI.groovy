@@ -1,7 +1,7 @@
 pipeline {
     agent {
         dockerfile {
-            filename 'docker/dockerfile-java'
+            filename 'docker/Dockerfile'
             additionalBuildArgs '--build-arg JENKINS_USER_ID=`id -u jenkins` --build-arg JENKINS_GROUP_ID=`id -g jenkins`'
         }
     }
@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'mvn -B -U clean test verify'
+                sh 'mvn -B -U clean test'
             }
         }
     }

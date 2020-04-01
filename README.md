@@ -7,9 +7,10 @@ ToDo: Description of the project.
 ## Table of contents
 
 - [Gettings started](#getting-started)
-- [Running tests](#running-tests)
-- [Deployment](#deployment)
-- [Docker environment](#docker-environment)
+  - [Prerequisites](#prerequisites)
+  - [Source code](#source-code)
+  - [Execute without Docker](#execute-without-docker)
+  - [Execute with Docker](#execute-with-docker)
 - [Information](#information)
 
 ## Getting started
@@ -24,8 +25,9 @@ To build the project, the following prerequisites must be met:
 - ToDo: Check the prerequisites
 - Java JDK 1.8 or higher (e.g. [OpenJDK](https://openjdk.java.net/))
 - [Maven](https://maven.apache.org/) 3.x
+- [PostgreSQL](https://www.postgresql.org/) 11
 
-For a ready to use Docker environment with all prerequisites already installed and prepared, you can check out the [Docker environment](#docker-environment) section.
+If you want to run the application using [Docker](https://www.docker.com/), the environment is already set up with all dependencies for you. You only have to install [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) and follow the instruction in the [dedicated section](#execute-with-docker).
 
 ### Source code
 
@@ -41,66 +43,46 @@ Change directory:
 ToDo: cd project-name/
 ```
 
-### Build
+### Execute without Docker
+
+Copy the file `src/main/resources/application.properties` to `src/main/resources/application-local.properties` and adjust the variables that get their values from environment variables. You can take a look at the `.env.example` for some help.
 
 Build the project:
 
 ```bash
-mvn clean install
+mvn -Dspring.profiles.active=local clean install
 ```
 
-## Running tests
+Run the project:
 
-The unit tests can be executed with the following command:
+```bash
+mvn -Dspring.profiles.active=local spring-boot:run
+```
+
+The service will be available at localhost and your specified server port.
+
+To execute the test you can run the following command:
 
 ```bash
 mvn clean test
 ```
 
-## Deployment
+### Execute with Docker
 
-ToDo: A detailed description about how the application must be deployed.
+Copy the file `.env.example` to `.env` and adjust the configuration parameters.
 
-## Docker environment
-
-For the project a Docker environment is already prepared and ready to use with all necessary prerequisites.
-
-These Docker containers are the same as used by the continuous integration servers.
-
-### Installation
-
-Install [Docker](https://docs.docker.com/install/) (with Docker Compose) locally on your machine.
-
-### Start and stop the containers
-
-Before start working you have to start the Docker containers:
-
-```
-docker-compose up --build --detach
-```
-
-After finished working you can stop the Docker containers:
-
-```
-docker-compose stop
-```
-
-### Running commands inside the container
-
-When the containers are running, you can execute any command inside the environment. Just replace the dots `...` in the following example with the command you wish to execute:
+Then you can start the application using the following command:
 
 ```bash
-docker-compose exec java /bin/bash -c "..."
+docker-compose up
 ```
 
-Some examples are:
+The service will be available at localhost and your specified server port.
+
+To execute the test you can run the following command:
 
 ```bash
-docker-compose exec java /bin/bash -c "mvn clean install"
-
-# or
-
-docker-compose exec java /bin/bash -c "mvn clean test"
+docker-compose run --rm app mvn clean test
 ```
 
 ## Information

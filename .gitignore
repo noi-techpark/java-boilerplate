@@ -1,5 +1,18 @@
+# General
+.DS_Store
+
 # Editors
 .idea
+*.iws
+*.iml
+*.ipr
+.vscode
 
 # Project
-target
+/.env
+/src/main/resources/application-local.properties
+/.mvn
+/target
+.settings
+.project
+.classpath
