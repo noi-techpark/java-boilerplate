@@ -7,7 +7,7 @@ services:
     environment:
       SERVER_PORT: ${SERVER_PORT}
       POSTGRES_URL: ${POSTGRES_URL}
-      POSTGRES_USERNAME: ${POSTGRES_USERNAME}
+      POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:${SERVER_PORT}/actuator/health"]

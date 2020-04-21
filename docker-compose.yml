@@ -16,7 +16,7 @@ services:
     environment:
       SERVER_PORT: ${SERVER_PORT}
       POSTGRES_URL: ${POSTGRES_URL}
-      POSTGRES_USERNAME: ${POSTGRES_USERNAME}
+      POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "${SERVER_PORT}:${SERVER_PORT}"
@@ -25,7 +25,7 @@ services:
     image: postgres:11
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USERNAME: ${POSTGRES_USERNAME}
+      POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "5432:5432"

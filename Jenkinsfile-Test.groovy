@@ -9,7 +9,7 @@ pipeline {
         SERVER_PORT = "1000"
 
         POSTGRES_URL = "jdbc:postgresql://test-pg-bdp.co90ybcr8iim.eu-west-1.rds.amazonaws.com:5432/project"
-        POSTGRES_USERNAME = credentials('project-api-test-postgres-username')
+        POSTGRES_USER = credentials('project-api-test-postgres-username')
         POSTGRES_PASSWORD = credentials('project-api-test-postgres-password')
     }
 
@@ -26,7 +26,7 @@ pipeline {
                     echo 'SERVER_PORT=${SERVER_PORT}' >> .env
 
                     echo 'POSTGRES_URL=${POSTGRES_URL}' >> .env
-                    echo 'POSTGRES_USERNAME=${POSTGRES_USERNAME}' >> .env
+                    echo 'POSTGRES_USER=${POSTGRES_USER}' >> .env
                     echo 'POSTGRES_PASSWORD=${POSTGRES_PASSWORD}' >> .env
                 """
             }
