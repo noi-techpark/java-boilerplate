@@ -84,8 +84,12 @@
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>3.13.0</version>
                 <configuration>
+                    <linkXRef>false</linkXRef>
                     <failOnViolation>true</failOnViolation> <!-- this is actually true by default, but can be disabled -->
                     <printFailingErrors>true</printFailingErrors>
+                    <rulesets>
+                        <ruleset>/category/java/bestpractices.xml</ruleset>
+                    </rulesets>
                 </configuration>
                 <executions>
                     <execution>
