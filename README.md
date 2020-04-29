@@ -104,6 +104,10 @@ git config --global core.hooksPath .githooks
 
 ## Information
 
+### Guidelines
+
+Find [here](https://opendatahub.readthedocs.io/en/latest/guidelines.html) guidelines for developers.
+
 ### Support
 
 ToDo: For support, please contact [info@opendatahub.bz.it](mailto:info@opendatahub.bz.it).
