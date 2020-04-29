@@ -4,12 +4,12 @@ services:
   app:
     build:
       context: .
-      dockerfile: docker/Dockerfile
+      dockerfile: docker/app/Dockerfile
       target: dev
     volumes:
-       - ./:/code
+      - ./:/code
     working_dir: /code
-    command: ["mvn spring-boot:run"]
+    command: ["./mvnw spring-boot:run"]
     depends_on:
       - postgres
     tty: true
