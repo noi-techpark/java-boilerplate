@@ -7,6 +7,7 @@ pipeline {
         DOCKER_TAG = "prod-$BUILD_NUMBER"
 
         SERVER_PORT = "1000"
+        LOG_APPLICATION_NAME = "java-boilerplate"
 
         POSTGRES_URL = "jdbc:postgresql://postgres-prod.co90ybcr8iim.eu-west-1.rds.amazonaws.com:5432/project"
         POSTGRES_USER = credentials('project-api-prod-postgres-username')
@@ -24,6 +25,7 @@ pipeline {
                     echo 'DOCKER_TAG=${DOCKER_TAG}' >> .env
 
                     echo 'SERVER_PORT=${SERVER_PORT}' >> .env
+                    echo 'LOG_APPLICATION_NAME=${LOG_APPLICATION_NAME}' >> .env
 
                     echo 'POSTGRES_URL=${POSTGRES_URL}' >> .env
                     echo 'POSTGRES_USER=${POSTGRES_USER}' >> .env
