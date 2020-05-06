@@ -9,6 +9,7 @@ services:
       POSTGRES_URL: ${POSTGRES_URL}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      LOG_APPLICATION_NAME: ${LOG_APPLICATION_NAME}
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:${SERVER_PORT}/actuator/health"]
       interval: 20s
