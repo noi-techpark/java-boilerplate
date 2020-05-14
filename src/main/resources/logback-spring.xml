@@ -8,6 +8,11 @@
     <springProfile name="default">
         <appender name="jsonConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
             <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+                <fieldNames>
+                    <version>[ignore]</version>
+                    <logger>[ignore]</logger>
+                    <thread>[ignore]</thread>
+                </fieldNames>
                 <customFields>{"application":"${LOG_APPLICATION_NAME:-app}"}"}</customFields>
             </encoder>
         </appender>
