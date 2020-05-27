@@ -11,7 +11,6 @@ ToDo: Description of the project.
   - [Source code](#source-code)
   - [Execute without Docker](#execute-without-docker)
   - [Execute with Docker](#execute-with-docker)
-  - [Git Hooks](#git-hooks)
 - [Information](#information)
 
 ## Getting started
@@ -90,16 +89,6 @@ To execute the test you can run the following command:
 
 ```bash
 docker-compose run --rm app mvn clean test
-```
-
-### Git Hooks
-
-To have a common code structure and make sure that Java best practices are folled we use the [PMD plugin](http://maven.apache.org/plugins/maven-pmd-plugin/index.html).
-
-To make sure that the code is in the right format and follows generally accepted [Best practices](https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#accessorclassgeneration) we define some pre-commit hooks, that run the code validation on each commit automatically. To support this on your local machine you have to execute following command.
-
-```bash
-git config --global core.hooksPath .githooks
 ```
 
 ## Information
