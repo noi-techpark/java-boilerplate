@@ -53,6 +53,12 @@ Build the project:
 mvn -Dspring.profiles.active=local clean install
 ```
 
+Run external dependencies, such as the database:
+
+```
+docker-compose -f docker-compose.dependencies.yml up --detach
+```
+
 Run the project:
 
 ```bash
@@ -86,6 +92,10 @@ docker-compose run --rm app mvn clean test
 ```
 
 ## Information
+
+### Guidelines
+
+Find [here](https://opendatahub.readthedocs.io/en/latest/guidelines.html) guidelines for developers.
 
 ### Support
 

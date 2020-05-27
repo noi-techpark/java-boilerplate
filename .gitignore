@@ -11,7 +11,7 @@
 # Project
 /.env
 /src/main/resources/application-local.properties
-/.mvn
+!.mvn/wrapper/maven-wrapper.jar
 /target
 .settings
 .project

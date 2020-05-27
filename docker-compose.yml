@@ -4,20 +4,21 @@ services:
   app:
     build:
       context: .
-      dockerfile: docker/Dockerfile
+      dockerfile: docker/app/Dockerfile
       target: dev
     volumes:
-       - ./:/code
+      - ./:/code
     working_dir: /code
-    command: ["mvn spring-boot:run"]
+    command: ["./mvnw spring-boot:run"]
     depends_on:
       - postgres
     tty: true
     environment:
       SERVER_PORT: ${SERVER_PORT}
       POSTGRES_URL: ${POSTGRES_URL}
-      POSTGRES_USERNAME: ${POSTGRES_USERNAME}
+      POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      LOG_APPLICATION_NAME: ${LOG_APPLICATION_NAME}
     ports:
       - "${SERVER_PORT}:${SERVER_PORT}"
 
@@ -25,7 +26,7 @@ services:
     image: postgres:11
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USERNAME: ${POSTGRES_USERNAME}
+      POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "5432:5432"

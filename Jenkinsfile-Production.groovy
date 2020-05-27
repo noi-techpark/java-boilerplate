@@ -7,9 +7,10 @@ pipeline {
         DOCKER_TAG = "prod-$BUILD_NUMBER"
 
         SERVER_PORT = "1000"
+        LOG_APPLICATION_NAME = "java-boilerplate"
 
         POSTGRES_URL = "jdbc:postgresql://postgres-prod.co90ybcr8iim.eu-west-1.rds.amazonaws.com:5432/project"
-        POSTGRES_USERNAME = credentials('project-api-prod-postgres-username')
+        POSTGRES_USER = credentials('project-api-prod-postgres-username')
         POSTGRES_PASSWORD = credentials('project-api-prod-postgres-password')
     }
 
@@ -24,9 +25,10 @@ pipeline {
                     echo 'DOCKER_TAG=${DOCKER_TAG}' >> .env
 
                     echo 'SERVER_PORT=${SERVER_PORT}' >> .env
+                    echo 'LOG_APPLICATION_NAME=${LOG_APPLICATION_NAME}' >> .env
 
                     echo 'POSTGRES_URL=${POSTGRES_URL}' >> .env
-                    echo 'POSTGRES_USERNAME=${POSTGRES_USERNAME}' >> .env
+                    echo 'POSTGRES_USER=${POSTGRES_USER}' >> .env
                     echo 'POSTGRES_PASSWORD=${POSTGRES_PASSWORD}' >> .env
                 """
             }
@@ -36,7 +38,7 @@ pipeline {
             steps {
                 sh '''
                     docker-compose --no-ansi build --pull --build-arg JENKINS_USER_ID=$(id -u jenkins) --build-arg JENKINS_GROUP_ID=$(id -g jenkins)
-                    docker-compose --no-ansi run --rm --no-deps -u $(id -u jenkins):$(id -g jenkins) app mvn clean test
+                    docker-compose --no-ansi run --rm --no-deps -u $(id -u jenkins):$(id -g jenkins) app ./mvnw -B -U clean test
                 '''
             }
         }
