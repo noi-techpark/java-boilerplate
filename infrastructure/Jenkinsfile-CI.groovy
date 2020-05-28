@@ -1,7 +1,7 @@
 pipeline {
     agent {
         dockerfile {
-            filename 'docker/app/Dockerfile'
+            filename 'infrastructure/docker/app/Dockerfile'
             additionalBuildArgs '--build-arg JENKINS_USER_ID=`id -u jenkins` --build-arg JENKINS_GROUP_ID=`id -g jenkins`'
         }
     }

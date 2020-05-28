@@ -11,7 +11,7 @@ ARG JENKINS_USER_ID=1000
 RUN addgroup --gid $JENKINS_GROUP_ID jenkins && \
    adduser --uid $JENKINS_USER_ID --groups jenkins jenkins
 
-COPY docker/app/entrypoint.sh /entrypoint.sh
+COPY infrastructure/docker/entrypoint.sh /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
 
 # Build
