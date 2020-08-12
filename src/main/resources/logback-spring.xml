@@ -13,7 +13,6 @@
                     <logger>[ignore]</logger>
                     <thread>[ignore]</thread>
                 </fieldNames>
-                <customFields>{"application":"${LOG_APPLICATION_NAME:-app}"}"}</customFields>
             </encoder>
         </appender>
         <root level="INFO">
