@@ -6,12 +6,20 @@ ToDo: Description of the project.
 
 ## Table of contents
 
-- [Gettings started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Source code](#source-code)
-  - [Execute without Docker](#execute-without-docker)
-  - [Execute with Docker](#execute-with-docker)
-- [Information](#information)
+- [ToDo: Project Name](#todo-project-name)
+  - [Table of contents](#table-of-contents)
+  - [Getting started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Source code](#source-code)
+    - [Execute without Docker](#execute-without-docker)
+    - [Execute with Docker](#execute-with-docker)
+  - [Information](#information)
+    - [Guidelines](#guidelines)
+    - [Support](#support)
+    - [Contributing](#contributing)
+    - [Documentation](#documentation)
+    - [Boilerplate](#boilerplate)
+    - [License](#license)
 
 ## Getting started
 
@@ -103,17 +111,9 @@ ToDo: For support, please contact [info@opendatahub.bz.it](mailto:info@opendatah
 
 ### Contributing
 
-If you'd like to contribute, please follow the following instructions:
-
-- Fork the repository.
-
-- Checkout a topic branch from the `development` branch.
-
-- Make sure the tests are passing.
-
-- Create a pull request against the `development` branch.
-
-A more detailed description can be found here: [https://github.com/noi-techpark/documentation/blob/master/contributors.md](https://github.com/noi-techpark/documentation/blob/master/contributors.md).
+If you'd like to contribute, please follow our [Getting
+Started](https://github.com/noi-techpark/odh-docs/wiki/Contributor-Guidelines:-Getting-started)
+instructions.
 
 ### Documentation
 
