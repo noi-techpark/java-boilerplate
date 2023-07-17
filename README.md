@@ -8,7 +8,7 @@ Replace all `ToDo` notes with the appropriate names, descriptions and commands.
 
 # ToDo: Project Name
 
-![REUSE Compliance](https://github.com/noi-techpark/java-boilerplate/actions/workflows/reuse.yml/badge.svg)
+[![REUSE Compliance](https://github.com/noi-techpark/java-boilerplate/actions/workflows/reuse.yml/badge.svg)](https://github.com/noi-techpark/odh-docs/wiki/REUSE#badges)
 
 ToDo: Description of the project.
 
