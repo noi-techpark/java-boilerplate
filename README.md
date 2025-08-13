@@ -8,7 +8,7 @@ Replace all `ToDo` notes with the appropriate names, descriptions and commands.
 
 # ToDo: Project Name
 
-[![REUSE Compliance](https://github.com/noi-techpark/java-boilerplate/actions/workflows/reuse.yml/badge.svg)](https://github.com/noi-techpark/odh-docs/wiki/REUSE#badges)
+[![REUSE Compliance](https://github.com/noi-techpark/java-boilerplate/actions/workflows/reuse.yml/badge.svg)](https://github.com/noi-techpark/opendatahub-docs/wiki/REUSE)
 
 ToDo: Description of the project.
 
@@ -39,7 +39,7 @@ on your local machine for development and testing purposes.
 To build the project, the following prerequisites must be met:
 
 - ToDo: Check the prerequisites
-- Java JDK 1.8 or higher (e.g. [OpenJDK](https://openjdk.java.net/))
+- Java JDK 1.8 or higher (e.g. [OpenJDK](https://openjdk.org/))
 - [Maven](https://maven.apache.org/) 3.x
 - [PostgreSQL](https://www.postgresql.org/) 11
 
@@ -50,7 +50,7 @@ If you want to run the application using [Docker](https://www.docker.com/), the 
 Get a copy of the repository:
 
 ```bash
-ToDo: git clone https://github.com/noi-techpark/project-name.git
+ToDo: git clone https://github.com/noi-techpark/project-name
 ```
 
 Change directory:
@@ -120,7 +120,7 @@ ToDo: For support, please contact [info@opendatahub.com](mailto:info@opendatahub
 ### Contributing
 
 If you'd like to contribute, please follow our [Getting
-Started](https://github.com/noi-techpark/odh-docs/wiki/Contributor-Guidelines:-Getting-started)
+Started](https://github.com/noi-techpark/opendatahub-docs/wiki/Contributor-Guidelines:-Getting-started)
 instructions.
 
 ### Documentation
@@ -137,7 +137,7 @@ The code in this project is licensed under the GNU AFFERO GENERAL PUBLIC LICENSE
 
 ### REUSE
 
-This project is [REUSE](https://reuse.software) compliant, more information about the usage of REUSE in NOI Techpark repositories can be found [here](https://github.com/noi-techpark/odh-docs/wiki/Guidelines-for-developers-and-licenses#guidelines-for-contributors-and-new-developers).
+This project is [REUSE](https://reuse.software) compliant, more information about the usage of REUSE in NOI Techpark repositories can be found [here](https://github.com/noi-techpark/opendatahub-docs/wiki/Guidelines-for-developers-and-licenses).
 
 Since the CI for this project checks for REUSE compliance you might find it useful to use a pre-commit hook checking for REUSE compliance locally. The [pre-commit-config](.pre-commit-config.yaml) file in the repository root is already configured to check for REUSE compliance with help of the [pre-commit](https://pre-commit.com) tool.
 
